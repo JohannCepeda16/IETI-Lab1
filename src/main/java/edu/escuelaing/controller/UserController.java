@@ -17,7 +17,7 @@ import edu.escuelaing.ieti.services.UserService;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "/v1/user")
+@RequestMapping("api/v1/")
 public class UserController {
 
     private final UserService userServices;
@@ -26,7 +26,7 @@ public class UserController {
         this.userServices = userService;
     }
 
-    @GetMapping
+    @GetMapping()
     public ResponseEntity<List<User>> all() {
         try {
             return ResponseEntity.ok().body(userServices.all());
