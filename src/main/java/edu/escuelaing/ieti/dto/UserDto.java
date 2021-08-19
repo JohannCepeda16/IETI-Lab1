@@ -1,6 +1,8 @@
 package edu.escuelaing.ieti.dto;
 
-public class UserDto {
+import java.io.Serializable;
+
+public class UserDto implements Serializable{
     private String name;
     private String lastName;
     private String email;
@@ -8,7 +10,7 @@ public class UserDto {
 
 
     public UserDto() {
-        
+
     }
 
     public UserDto(String name, String lastName, String email, boolean created) {
